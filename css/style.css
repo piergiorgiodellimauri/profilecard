@@ -5,6 +5,7 @@
   font-size: 18px;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
 }
 
 :root{
@@ -13,8 +14,7 @@
   --dgb: hsl(227, 10%, 46%);
   --dg:hsl(0, 0%, 59%);
   --vg:#cccccc;
-  transform: rotate(45deg);
-}
+  }
 body{
   display: flex;
   flex-direction: column;
@@ -22,10 +22,11 @@ body{
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background:url(../images/bg-pattern-top.svg), url(../images/bg-pattern-top.svg);
+  background-position:left -80px top -430px, right 50px bottom -450px;
+  background-repeat:no-repeat,no-repeat;
   background-color: var(--dc);
-  background-image: url(../images/bg-pattern-top.svg);
-  background-repeat: repeat-x;
-  transform: rotate(-45deg);
+
 }
 
 h1{
@@ -106,6 +107,7 @@ ul{
 .value{
   font-weight:bold;
   color: var(--vddb);
+  align-items: center;
 }
 
 .type{
@@ -113,6 +115,7 @@ ul{
   font-weight: lighter;
   color: var(--dg);
   line-height: 2;
+  align-items: center;
 }
 
 .attribution {
@@ -122,4 +125,17 @@ text-align: center;
 }
 .attribution a {
 color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 750px){
+  body{
+    background-color: var(--dc);
+   background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+   background-position: left -670px top -580px, right -770px bottom -500px;
+   background-repeat: no-repeat, no-repeat;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
 }
